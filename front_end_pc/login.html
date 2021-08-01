@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Dashio - Bootstrap Admin Template</title>
+  <!-- Favicons -->
+  <script type="text/javascript" src="js/vue-2.5.16.js"></script>
+
+
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Bootstrap core CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="login-page">
+    <div class="container" id="app">
+      <form class="form-login" @submit.prevent="on_submit">
+        <h2 class="form-login-heading">sign in now</h2>
+        <div class="login-wrap">
+          <input type="text" class="form-control" v-model="username" placeholder="username" autofocus>{{error_name_message}}
+          <br>
+          <input type="password" class="form-control" placeholder="Password" v-model="password">{{error_password_message}}
+          <br>
+          <input type="text" class="form-control" placeholder="手机号不能重复" v-model="mobile">{{error_phone_message}}
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+            <span class="pull-right">
+              <a data-toggle="modal" href="http://127.0.0.1:8080/index.html"> Forgot Password?</a>
+            </span>
+          </label>
+          <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock">SIGN IN</i> </button>
+          <hr>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <!--BACKSTRETCH-->
+  <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+  <script type="text/javascript" src="lib/jquery.backstretch.min.js"></script>
+  <script>
+    $.backstretch("img/weather.jpg", {
+      speed: 500
+    });
+  </script>
+</body>
+<script type="text/javascript" src="js/axios.min.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+<!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+<!-- 引入 qs 在bootcdn搜索qs -->
+<script src="https://cdn.bootcdn.net/ajax/libs/qs/6.9.4/qs.min.js"></script>
+</html>
