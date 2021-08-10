@@ -94,10 +94,10 @@ const vm = new Vue({
                     })
                     .then(response => {
                         // 记录用户的登录状态
-                        // sessionStorage.clear();
-                        // localStorage.clear();
-                        // localStorage.username = response.data.username;
-                        // this.username = response.data.username;
+                        sessionStorage.clear();
+                        localStorage.clear();
+                        localStorage.username = response.data.username;
+                        this.username = response.data.username;
                         // localStorage.user_id = response.data.id;
                         location.href = '/index.html';
                     })
